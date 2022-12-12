@@ -23,16 +23,22 @@ package org.example.lesson1.lesson1DZ;
 //        Since an empty string reads the same forward and backward, it is a palindrome.
 public class Tack125 {
     public static boolean isPalindrome(String s) {
-        if (s.length() == 0) return true;
+        if (s.length() == 0) {
+            return true;
+        }
         String palindrom = "";
 
         for (int i = 0; i < s.length(); i++) {
-            if (Character.isLetterOrDigit(s.charAt(i))) palindrom += s.charAt(i);
+            if (Character.isLetterOrDigit(s.charAt(i))) {
+                palindrom += s.charAt(i);
+            }
         }
         palindrom = palindrom.toLowerCase();
         int start = 0, end = palindrom.length() - 1;
         while (start < end) {
-            if (palindrom.charAt(start) != palindrom.charAt(end)) return false;
+            if (palindrom.charAt(start) != palindrom.charAt(end)) {
+                return false;
+            }
             end--;
             start++;
         }
