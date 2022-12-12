@@ -1,9 +1,11 @@
-package org.example.lesson1;
-//Вам даны две строки word 1 и word 2. Объедините строки, добавив буквы в чередующемся порядке, начиная со слова 1.
+package org.example.lesson1.lesson1DZ;
+
+public class Tack1768 {
+    //Вам даны две строки word 1 и word 2. Объедините строки, добавив буквы в чередующемся порядке, начиная со слова 1.
 // Если строка длиннее другой, добавьте дополнительные буквы в конец объединенной строки.
 //        Return the merged string.
 
-//        Example 1:
+    //        Example 1:
 //
 //        Input: word1 = "abc", word2 = "pqr"
 //        Output: "apbqcr"
@@ -27,16 +29,26 @@ package org.example.lesson1;
 //        word1:  a   b   c   d
 //        word2:    p   q
 //        merged: a p b q c   d
-public class Tack1768 {
-    public String mergeAlternately(String word1, String word2) {
+    public static String mergeAlternately(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
         int len = Math.max(word1.length(), word2.length());
-        for(int i = 0; i< len; i++) {
-            if(i < word1.length())
+        for (int i = 0; i < len; i++) {
+            if (i < word1.length()) {
                 sb.append(word1.charAt(i));
-            if(i < word2.length())
+            }
+            if (i < word2.length()) {
                 sb.append(word2.charAt(i));
+            }
         }
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        String word1 = "abc", word2 = "pqr";
+        String word3 = "ab", word4 = "pqrs";
+        String word5 = "abcd", word6 = "pq";
+        System.out.println(mergeAlternately(word1, word2));
+        System.out.println(mergeAlternately(word3, word4));
+        System.out.println(mergeAlternately(word5, word6));
     }
 }
