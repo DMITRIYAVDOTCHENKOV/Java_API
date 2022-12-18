@@ -21,28 +21,28 @@ public class MyEquals {
 
 
         boolean result = equales(arrayList1, arrayList2);
-            if (result) {
-                System.out.println("Списки одинаковы");
-            }else {
-                System.out.println("Списки разные");
-            }
+        if (result) {
+            System.out.println("Списки одинаковы");
+        } else {
+            System.out.println("Списки разные");
         }
+    }
 
     private static boolean equales(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2) {
-        if (arrayList1 == arrayList2){
+        if (arrayList1 == arrayList2) {
             return true;
         }
 
-        if (arrayList1 == null || arrayList2 == null){
+        if (arrayList1 == null || arrayList2 == null) {
             return false;
         }
 
-        if (arrayList1.size() != arrayList2.size()){
+        if (arrayList1.size() != arrayList2.size()) {
             return false;
         }
 
-        for (int i = 0; i < arrayList1.size() ; i++) {
-            if (arrayList1.get(i) != arrayList2.get(i)){
+        for (int i = 0; i < arrayList1.size(); i++) {
+            if (arrayList1.get(i) != arrayList2.get(i)) {
                 return false;
             }
         }

@@ -26,7 +26,6 @@ public class DuplicateNumbers {
         arrayList2.add(3);
 
 
-
         for (Iterator<Integer> iterator = arrayList1.iterator(); iterator.hasNext(); ) {
             Integer array = iterator.next();
             if (array == num) {
@@ -45,12 +44,10 @@ public class DuplicateNumbers {
         System.out.println("Во втором списке, число " + num + " Встерчается " + duplArrayList2 + " раз");
 
 
-        if (duplArrayList1 == duplArrayList2){
+        if (duplArrayList1 == duplArrayList2) {
             System.out.printf("Число %d входит одинаковое кол-во раз в списки", num);
-        }else {
+        } else {
             System.out.printf("Число %d входит разное кол-во раз в списки", num);
         }
-
     }
-
 }
